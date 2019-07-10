@@ -10,10 +10,12 @@ class ShapedClock : public QWidget
     Q_OBJECT
 
 public:
-    ShapedClock(QWidget *parent,int tz);
+    ShapedClock(QWidget *parent,int tz,QString cn);
     QSize sizeHint() const override;
+    QString ctnm;
     int tmzn;
-    int hour;
+    QString getCN();
+    int getTZ();
 
 protected:
     void paintEvent(QPaintEvent *event) override;

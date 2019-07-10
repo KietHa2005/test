@@ -7,6 +7,8 @@
 #include <QThread>
 #include "shapedclock.h"
 #include "information.h"
+#include "QVBoxLayout"
+#include "QLabel"
 
 namespace Ui {
 class MainWindow;
@@ -20,13 +22,18 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     Ui::MainWindow *ui;
-    worldclock *wc;
-    worldclock *wcHN;
-    worldclock *wcLD;
-    worldclock *wcNY;
-    ShapedClock *clockHN = new ShapedClock(this,7);
-    ShapedClock *clockLD = new ShapedClock(this,1);
-    ShapedClock *clockNY = new ShapedClock(this,-6);
+    QVBoxLayout *vertlay;
+    QVBoxLayout *vertlay_HN;
+    QVBoxLayout *vertlay_LD;
+    QVBoxLayout *vertlay_NY;
+    QLabel *label_HNn;
+    QLabel *label_LDn;
+    QLabel *label_NYn;
+    QLabel *label_n;
+    ShapedClock *clockHN;
+    ShapedClock *clockLD;
+    ShapedClock *clockNY;
+    ShapedClock *clockWC;
     Information *inf;
 
 public slots:

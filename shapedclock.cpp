@@ -1,5 +1,4 @@
 #include <QtWidgets>
-
 #include "shapedclock.h"
 
 ShapedClock::ShapedClock(QWidget *parent,int tz)
@@ -100,4 +99,4 @@ void ShapedClock::resizeEvent(QResizeEvent * /* event */)
 QSize ShapedClock::sizeHint() const
 {
     return QSize(100, 100);
-}    
+}
